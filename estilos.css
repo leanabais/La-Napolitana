@@ -1,0 +1,253 @@
+/* ---- Header ---- */
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 25px 10px 25px;
+}
+
+.logo img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.nav-bar ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: rgb(54, 54, 54);
+    font-family: "Kanit", sans-serif;
+    font-weight: 600;
+    padding: 7px;
+    transition: all 0.5s ease;
+}
+
+.nav-bar a:hover{
+    background-color: rgb(201, 30, 30);
+    color: white;
+    padding: 12px;
+    border-radius: 8%;
+}
+
+/* ---- Main ---- */
+
+#productos {
+    text-align: center;
+}
+
+h3 {
+    font-family: "Kanit", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+}
+
+h2 {
+    font-family: "Kanit", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    text-align: center;
+}
+
+p {
+    font-family: "Kanit", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    text-align: center;
+}
+
+
+.productos-contenedor {
+    background-color: rgb(245, 245, 245);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1vw;
+    padding: 2vw;
+    justify-content: center;
+    border-radius: 20px;
+}
+
+.productos-contenedor .item {
+    background-color: rgb(255, 255, 255);
+    flex: 0 1 230px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 20px;
+    margin: 1vw;
+    box-sizing: border-box;
+    padding: 2vw;
+}
+
+.productos-contenedor .item:hover{
+    scale: 1.05;
+    transition: scale 0.5s ease;
+    
+}
+
+.productos-contenedor .item img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.btn-carrito {
+    background-color: #ec2334;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    font-family: "Kanit", sans-serif;
+    font-weight: 300;
+}
+
+.btn-carrito:hover {
+     background-color: #c52424;
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    font-family: "Kanit", sans-serif;
+    font-weight: 400;
+}
+
+/* ---- Reseñas ---- */
+
+#reseñas {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(20vw, 20vw));
+    gap: 30px;
+    margin: 30px;
+    justify-content: center;
+}
+
+.reseñas-item {
+    background-color: rgb(241, 239, 239);
+    border-radius: 10px;
+    padding: 15px ;
+}
+
+/* ---- Formulario ---- */
+
+#contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    background-color: rgb(245, 245, 245);
+    border-radius: 2vw;
+    margin: auto;
+}
+
+#contacto input,
+#contacto textarea {
+    width: 100%;
+    padding: 15px 15px;
+    border: 3px solid #cccccc;
+    border-radius: 8px;
+    font-size: 2vw;
+    font-family: "Kanit", sans-serif;
+    font-weight: 300;
+    margin: 5px;
+}
+
+#contacto button {
+    background-color: #009708;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#contacto button:hover {
+    background-color: #0b8101;
+    transform: scale(1.05);
+}
+
+form{
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.footer {
+    text-align: center;
+    padding: 2vw;
+    background-color: #ec2334; /* mismo rojo de los botones */
+    color: white;
+    font-family: "Kanit", sans-serif;
+    font-weight: 300;
+    font-size: 0.9rem;
+}
+
+/* ---- Media Queries ---- */
+
+
+@media (max-width: 977px) {
+    #contacto {
+        width: 70vw;
+        padding: 15px 15px;
+    }
+    #form{
+        display: flex;
+        text-align: center;
+    }
+}
+
+@media (max-width: 556px) {
+    /* ---- Header ---- */
+    .header {
+        display: block;
+        text-align: center;
+        padding: 0;
+    }
+    .nav-bar ul {
+        padding: 0;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    /* ---- Main ---- */
+    .productos-contenedor .item{
+            flex: 0 1 120px;
+    }
+    h2, p {
+        font-size: 2vh;
+        padding: 0;
+        margin: 0.5vw;
+    }
+    .btn-carrito .texto {
+        display: none;
+    }
+
+    /* ---- Main ---- */
+    #reseñas {
+        gap: 5vw;
+        margin: 1vh 8vw;
+        grid-template-columns: repeat(1, minmax(10vw, 30vh));
+    }
+    h2, h3,p {
+        margin: 0;
+        font-size: 2.8vw;
+    }
+    #contacto input, #contacto textarea{
+        font-size: 2.9vw;
+        padding: 1.5vw 2vw;
+    }
+        #contacto button{
+        padding: 1.2vw;
+        font-size: 3vw;
+    }
+}
