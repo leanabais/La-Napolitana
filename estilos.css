@@ -154,7 +154,7 @@ p {
     padding: 15px 15px;
     border: 3px solid #cccccc;
     border-radius: 8px;
-    font-size: 2vw;
+    font-size: 15px;
     font-family: "Kanit", sans-serif;
     font-weight: 300;
     margin: 5px;
@@ -250,4 +250,5 @@ form{
         padding: 1.2vw;
         font-size: 3vw;
     }
+
 }
