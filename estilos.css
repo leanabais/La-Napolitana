@@ -156,6 +156,27 @@ p {
     margin-bottom: 8px;
 }
 
+#carrito-items li {
+    margin-bottom: 8px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+#carrito-items button {
+    padding: 2px 6px;
+    font-size: 12px;
+    border: 1px solid #ccc;
+    background: #f5f5f5;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#carrito-items button:hover {
+    background: #e0e0e0;
+}
+
 /* ---- Reseñas ---- */
 
 #reseñas {
