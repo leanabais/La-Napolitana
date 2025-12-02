@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="La Napolitana" content="Pizza y empanadas para llevar">
+    <meta name="Neare Shop" content="Pizza y empanadas para llevar">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La Napolitana</title>
+    <title>Neare Shop</title>
     <link rel="stylesheet" href="estilos.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,7 +16,7 @@
     <!-- Encabezado de la Página -->
     <header class="header">
         <a href="./index.html" class="logo">
-            <img src="./logo.png" alt="Pizzeria La Napolitana">
+            <img src="./logo.png" alt="Neare Shop">
         </a>
 
         <!-- Barra de Navegación -->
@@ -26,7 +26,15 @@
                 <li><a href="#productos">Productos</a></li>
                 <li><a href="#reseñas">Reseñas</a></li>
                 <li><a href="#contacto">Contacto</a></li>
-
+                <li id="shop-icon">
+                <a href="#"><img class="cart-icon" src="https://brandeps.com/icon-download/S/Shopping-cart-icon-02.png" alt="Carrito de Compras"></a></li>
+                <div id="carrito-popup" class="hidden">
+                    <h3>Carrito</h3>
+                    <ul id="carrito-items"></ul>
+                    <p>Total: $<span id="carrito-total">0</span></p>
+                    <button id="cerrar-carrito">Cerrar</button>
+                    <button id="pagar-carrito">Pagar</button>
+                </div>
             </ul>
         </nav>
     </header>
@@ -34,80 +42,8 @@
         <!-- Sección de Productos -->
         <section id="productos">
             <h2>Catálogo de Productos</h2>
-            <p>Disfrutá tu pizza ideal</p>
-            <section class="productos-contenedor">
-                <div class="item">
-                    <img src="https://breaders.com.ar/web/wp-content/uploads/2022/01/pizzas-muzzarella.jpg" alt="Muzzarella">
-                    <h2>Pizza de Muzzarella</h2>
-                    <p>$10500</p>
-                    <button class="btn-carrito">
-                    <span class="icono"><i class="fas fa-shopping-cart"></i></span>
-                    <span class="texto">Agregar al Carrito</span>
-                    </button>
-                </div>
-                <div class="item">
-                    <img src="https://breaders.com.ar/web/wp-content/uploads/2025/07/breaders-pizza_jamon_y_morrones.jpg" alt="Jamón y Morrón">
-                    <h2>Pizza de Jamón y Morrón</h2>
-                    <p>$12500</p>
-                    <button class="btn-carrito">
-                    <span class="icono"><i class="fas fa-shopping-cart"></i></span>
-                    <span class="texto">Agregar al Carrito</span>
-                    </button>
-                </div>
-                <div class="item">
-                    <img src="https://i.pinimg.com/736x/2d/41/f7/2d41f7762a4e8b20473caada000641ff.jpg" alt="Salamín">
-                    <h2>Pizza de Salamín</h2>
-                    <p>$11000</p>
-                    <button class="btn-carrito">
-                    <span class="icono"><i class="fas fa-shopping-cart"></i></span>
-                    <span class="texto">Agregar al Carrito</span>
-                    </button>
-                </div>
-                <div class="item">
-                    <img src="https://assets.tmecosys.com/image/upload/t_web_rdp_recipe_584x480_1_5x/img/recipe/ras/Assets/32DEB895-CB89-4E7B-A585-39DBF1BB23BC/Derivates/F88F1950-551C-402F-86FF-1893F1410A63.jpg" alt="Cebolla">
-                    <h2>Pizza de Cebolla</h2>
-                    <p>$10000</p>
-                    <button class="btn-carrito">
-                    <span class="icono"><i class="fas fa-shopping-cart"></i></span>
-                    <span class="texto">Agregar al Carrito</span>
-                    </button>
-                </div>
-                <div class="item">
-                    <img src="https://breaders.com.ar/web/wp-content/uploads/2022/01/pizzas-napolitana-800x675.jpg" alt="Napolitana">
-                    <h2>Pizza Napolitana</h2>
-                    <p>$12500</p>
-                    <button class="btn-carrito">
-                    <span class="icono"><i class="fas fa-shopping-cart"></i></span>
-                    <span class="texto">Agregar al Carrito</span>
-                    </button>
-                </div>
-                <div class="item">
-                    <img src="https://comedera.com/wp-content/uploads/sites/9/2022/04/Pizza-cuatro-quesos-shutterstock_1514858234.jpg" alt="Cuatro Quesos">
-                    <h2>Pizza Cuatro Quesos</h2>
-                    <p>$12000</p>
-                    <button class="btn-carrito">
-                    <span class="icono"><i class="fas fa-shopping-cart"></i></span>
-                    <span class="texto">Agregar al Carrito</span>
-                    </button>
-                </div>
-                <div class="item">
-                    <img src="https://breaders.com.ar/web/wp-content/uploads/2025/07/breaders-pizza_provolone_y_verdeo.jpg" alt="Provolone y Verdeo">
-                    <h2>Pizza de Provolone y Verdeo</h2>
-                    <p>$11500</p>
-                    <button class="btn-carrito">
-                    <span class="icono"><i class="fas fa-shopping-cart"></i></span>
-                    <span class="texto">Agregar al Carrito</span>
-                    </button>
-                </div>
-                <div class="item">
-                    <img src="https://unareceta.com/wp-content/uploads/2014/05/receta-de-pizza-de-espinacas.jpg" alt="Verdura">
-                    <h2>Pizza de Verdura</h2>
-                    <p>$13000</p>
-                    <button class="btn-carrito">
-                    <span class="icono"><i class="fas fa-shopping-cart"></i></span>
-                    <span class="texto">Agregar al Carrito</span>
-                    </button>
-                </div>
+            <p>¡Encuentra tu producto ideal!</p>
+            <section id="productos-contenedor">
             </section>
         </section>
 
@@ -116,27 +52,27 @@
         <section id="reseñas">
             <article class="reseñas-item">
                 <h3>Andrés Bombero</h3>
-                <p>Prueben la de muzza gente, increible</p>
+                <p>A mi hijo le encanto el monitor!</p>
             </article>
 
             <article class="reseñas-item">
                 <h3>Juana Del Valle</h3>
-                <p>La atención es rápida y el personal educado</p>
+                <p>Me llegó rapido y bien embalado</p>
             </article>
 
             <article class="reseñas-item">
                 <h3>Salvador Pérez</h3>
-                <p>Los sabores de las pizzas, ingredientes, la masa, muy bueno todo</p>
+                <p>Me compré un par de remeras, compren un talle de más...</p>
             </article>
 
             <article class="reseñas-item">
                 <h3>Jose Varela</h3>
-                <p>De las mejores pizzas que habré comido en mi vida.</p>
+                <p>Aproveché y me compré para armar mi pc</p>
             </article>
 
             <article class="reseñas-item">
                 <h3>Pedro Rodriguez</h3>
-                <p>Ideal para pedir en familia, todo llego perfecto y caliente</p>
+                <p>Que lindos los anillos, volveria a comprar.</p>
             </article>
         </section>
 
@@ -156,8 +92,9 @@
 
     <!-- Pie de Página -->
     <footer class="footer">
-        <p>© 2025 - La Napolitana - Todos los derechos reservados.</p>
+        <p>© 2025 - Neare Shop - Todos los derechos reservados.</p>
         <p>Powered by - Leandro Nabais</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
